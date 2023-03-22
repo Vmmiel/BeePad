@@ -27,7 +27,7 @@ Copy content to clipboard
 Clean page
 
 ## Supported files
-* .txt
+* .TXT
 
 ## Updates note
 The application it's on constant development, meaning that updates are going to bring new functionalities, more supported file extensions, performance upgrades, etc.
