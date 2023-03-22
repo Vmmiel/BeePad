@@ -1,5 +1,5 @@
 # BeePad
-[![Downloads](https://img.shields.io/github/v/release/Vmmiel/BeePad?style=for-the-badge&color=989dec&labelColor=ff9d21&label=Downloads&logo=appveyor)](https://github.com/Ammielv/BeePad/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/Vmmiel/BeePad/latest/total?style=for-the-badge&color=989dec&labelColor=ff9d21&label=Downloads&logo=appveyor)](https://github.com/Vmmiel/BeePad/releases/latest)
 
 Simple but intuitive notepad, made for the purpose of being visually relaxing thanks to it's modern UI, including a desaturated color palette and self-explanatory icons.
 
