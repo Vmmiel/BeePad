@@ -1,0 +1,45 @@
+﻿<Window x:Class="BeePad.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BeePad"
+        mc:Ignorable="d"
+        Title="BeePad" 
+        Topmost="False"
+        Closing="MainWindow_OnClose"
+        Height="400" Width="450"
+        MinHeight="70" MinWidth="260"
+        MaxHeight="{x:Static SystemParameters.MaximizedPrimaryScreenHeight}"
+        MaxWidth="{x:Static SystemParameters.MaximizedPrimaryScreenWidth}"
+        Background="#FF28232D">
+    <Grid>
+        <DockPanel>
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" VerticalAlignment="Top" Background="#28000000">
+                <Button Style="{StaticResource ButtonDarkMode}" Name="ButtonNewFile" Click="ButtonNewFile_Click" Width="35" Height="35" Focusable="False" BorderBrush="{x:Null}" Background="{x:Null}" Cursor="Hand" ToolTip="New file">
+                    <Image Width="20" Opacity="0.8" RenderOptions.BitmapScalingMode="HighQuality" Source="/Resources/Icons/file.png"/>
+                </Button>
+                <Button Style="{StaticResource ButtonDarkMode}" Name="ButtonOpenFile" Click="ButtonOpenFile_Click" Width="35" Height="35" Focusable="False" BorderBrush="{x:Null}" Background="{x:Null}" Cursor="Hand" ToolTip="Open file">
+                    <Image Width="20" Opacity="0.8" RenderOptions.BitmapScalingMode="HighQuality" Source="/Resources/Icons/folder-upload.png"/>
+                </Button>
+                <Button Style="{StaticResource ButtonDarkMode}" Name="ButtonSaveFile" Click="ButtonSaveFile_Click" Width="35" Height="35" Focusable="False" BorderBrush="{x:Null}" Background="{x:Null}" Cursor="Hand" ToolTip="Save file">
+                    <Image Width="20" Opacity="0.8" RenderOptions.BitmapScalingMode="HighQuality" Source="/Resources/Icons/disk.png"/>
+                </Button>
+                <Button Style="{StaticResource ButtonDarkMode}" Name="ButtonZoomIn" Click="ButtonZoomIn_Click" Width="35" Height="35" Focusable="False" BorderBrush="{x:Null}" Background="{x:Null}" Cursor="Hand" ToolTip="Zoom in">
+                    <Image Width="20" Opacity="0.8" RenderOptions.BitmapScalingMode="HighQuality" Source="/Resources/Icons/zoom-in.png"/>
+                </Button>
+                <Button Style="{StaticResource ButtonDarkMode}" Name="ButtonZoomOut" Click="ButtonZoomOut_Click" Width="35" Height="35" Focusable="False" BorderBrush="{x:Null}" Background="{x:Null}" Cursor="Hand" ToolTip="Zoom out">
+                    <Image Width="20" Opacity="0.8" RenderOptions.BitmapScalingMode="HighQuality" Source="/Resources/Icons/zoom-out.png"/>
+                </Button>
+                <Button Style="{StaticResource ButtonDarkMode}" Name="ButtonClipboardCopy" Click="ButtonClipboardCopy_Click" Width="35" Height="35" Focusable="False" BorderBrush="{x:Null}" Background="{x:Null}" Cursor="Hand" ToolTip="Copy to clipboard">
+                    <Image Width="20" Opacity="0.8" RenderOptions.BitmapScalingMode="HighQuality" Source="/Resources/Icons/clipboard-list-check.png"/>
+                </Button>
+                <Button Style="{StaticResource ButtonDarkMode}" Name="ButtonClean" Click="ButtonClean_Click" Width="35" Height="35" Focusable="False" BorderBrush="{x:Null}" Background="{x:Null}" Cursor="Hand" ToolTip="Clean page">
+                    <Image Width="20" Opacity="0.8" RenderOptions.BitmapScalingMode="HighQuality" Source="/Resources/Icons/broom.png" />
+                </Button>
+            </StackPanel>
+            <TextBox Style="{DynamicResource TextBoxDarkMode}" Name="TextBoxPage" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" TextWrapping="NoWrap" AcceptsTab="True" AcceptsReturn="True" 
+                     Padding="5, 5, 5, 5" BorderThickness="0,0,0,0" BorderBrush="{x:Null}" Foreground="#FFB9A096" CaretBrush="#FFB9A096" SelectionBrush="#FFFFB40F" SelectionOpacity="0.15" Background="{x:Null}" FontFamily="Cascadia Code Light" FontSize="14"/>
+        </DockPanel>
+    </Grid>
+</Window>

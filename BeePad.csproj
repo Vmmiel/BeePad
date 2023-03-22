@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>BeePad</AssemblyName>
+    <StartupObject>BeePad.App</StartupObject>
+    <Description>Notepad</Description>
+    <Company>$(Authors)</Company>
+    <Authors>$(AssemblyName)</Authors>
+    <IsPublishable>True</IsPublishable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <ApplicationIcon>Resources\beepad.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Icons\broom.png" />
+    <None Remove="Resources\Icons\clipboard-list-check.png" />
+    <None Remove="Resources\Icons\disk.png" />
+    <None Remove="Resources\Icons\file.png" />
+    <None Remove="Resources\Icons\folder-upload.png" />
+    <None Remove="Resources\Icons\zoom-in.png" />
+    <None Remove="Resources\Icons\zoom-out.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\beepad.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Icons\broom.png" />
+    <Resource Include="Resources\Icons\clipboard-list-check.png" />
+    <Resource Include="Resources\Icons\disk.png" />
+    <Resource Include="Resources\Icons\file.png" />
+    <Resource Include="Resources\Icons\folder-upload.png" />
+    <Resource Include="Resources\Icons\zoom-in.png" />
+    <Resource Include="Resources\Icons\zoom-out.png" />
+  </ItemGroup>
+
+</Project>
