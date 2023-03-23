@@ -2,22 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Automation.Peers;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace BeePad
 {
@@ -26,9 +12,9 @@ namespace BeePad
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static class SupportedFileFormats
+        Dictionary<string, string> SupportedFileFormats = new Dictionary<string, string>()
         {
-            public const string TXT = "(*.txt) | *.txt";
+            { "TXT", "(*.txt) | *.txt"}
         };
 
         public static class PageFile
@@ -100,7 +86,7 @@ namespace BeePad
         {
             if (CheckUnsavedChanges())
             {
-                OpenFileDialog openDialog = new OpenFileDialog() { Title = "Open file", Filter = "Text file " + SupportedFileFormats.TXT, FilterIndex = 1 };
+                OpenFileDialog openDialog = new OpenFileDialog() { Title = "Open file", Filter = "Text file " + SupportedFileFormats.GetValueOrDefault("TXT"), FilterIndex = 1 };
 
                 if (openDialog.ShowDialog() == true)
                     return PageFile.DocumentPath = openDialog.FileName;
@@ -128,7 +114,7 @@ namespace BeePad
 
         public bool SaveFile()
         {
-            SaveFileDialog saveDialog = new SaveFileDialog() { Title = "Save file", Filter = "Text file " + SupportedFileFormats.TXT, FilterIndex = 1, AddExtension = true };
+            SaveFileDialog saveDialog = new SaveFileDialog() { Title = "Save file", Filter = "Text file " + SupportedFileFormats.GetValueOrDefault("TXT"), FilterIndex = 1, AddExtension = true };
             saveDialog.ShowDialog();
             PageFile.DocumentPath = saveDialog.FileName;
 
